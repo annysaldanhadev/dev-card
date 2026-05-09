@@ -10,7 +10,7 @@ export default function Cadastro() {
     if (form.nome.length < 3 || !form.cargo || !form.anos || !form.tecnologia) {
       alert("Preencha os campos obrigatórios."); return;
     }
-    router.push({ pathname: '/preview', params: { ...form } });
+    router.push({ pathname: '/add-info', params: { nome: form.nome, cargo: form.cargo, empresa: form.empresa, anos: form.anos, tecnologia: form.tecnologia } });
   };
 
   return (
